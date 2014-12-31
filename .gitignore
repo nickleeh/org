@@ -1,9 +1,4 @@
-/books.html
-/clojure.html
-/emacs.html
-/emacs.log
-/emacs.tex
-/learning.html
-/learning.html~
-/linux.html
-/missfont.log
+*.html
+*.~
+*.log
+*.tex
