@@ -1,0 +1,126 @@
+#+SETUPFILE: org-html-themes/setup/bigblow-pirilampo.setup
+
+* Battery
+
+To show battery status:
+
+#+BEGIN_SRC 
+cat /sys/class/power_supply/BAT0/status 
+#+END_SRC
+
+Also in Emacs:
+
+#+BEGIN_SRC 
+M-x display-battery-mode    ;Display-Battery mode enabled
+#+END_SRC
+
+
+
+
+* Window Manager
+
+** xmonad
+
+Start nm-applet within the stalonetray:
+#+BEGIN_SRC 
+stalonetray || nm-applet 
+#+END_SRC
+
+And ~C-c C-c~ to terminate it.
+
+** Qtile
+
+Before restarting Qtile you can test your config file for syntax errors using the command:
+#+BEGIN_SRC 
+python2 -m py_compile ~/.config/qtile/config.py
+#+END_SRC
+
+If the command gives no output, your script is correct.
+* APT Package Management
+
+** List ten largest installed package:
+
+#+BEGIN_SRC 
+dpkg-query -Wf '${Installed-size}\t${Package}\n' | column -t | sort -nr | head
+#+END_SRC
+
+
+
+** Hash Sum Mismatch
+
+Just remove the content of /var/lib/apt/lists directory:
+
+sudo rm -r /var/lib/apt/lists/*
+
+then run:
+
+sudo apt-get update
+
+* Hash sum mismatch
+
+Just remove the content of /var/lib/apt/lists directory:
+
+sudo rm /var/lib/apt/lists/*
+then run:
+
+sudo apt-get update
+
+
+* System Administration
+
+** Kill several process: 
+#+BEGIN_SRC 
+for pid in $(ps -ef | grep "chrome" | awk '{print $2}'); do kill -9 $pid; done
+#+END_SRC
+
+or 
+ 
+#+BEGIN_SRC 
+for pid in $(ps -ef | awk '/chrome/ {print $2}'); do kill -9 $pid; done
+#+END_SRC
+
+Kill all emacs:
+
+#+BEGIN_SRC 
+killall emacs
+#+END_SRC
+
+
+*** In Eshell:
+
+For your particular problem you have to remember that some commands
+have been replaced with eshell internals, including kill. If you can't
+kill a process with
+
+for pid in { ps -ef | grep "chrome" | awk '{print $2}' } {kill $pid}
+try this instead
+#+BEGIN_SRC 
+for pid in { ps -ef | grep "chrome" | awk '{print $2}' } {/bin/kill $pid}
+#+END_SRC
+
+Or possibly better:
+#+BEGIN_SRC 
+for pid in { pgrep "chrome" } {/bin/kill $pid}
+#+END_SRC
+
+
+**  WiFi 
+network-manager
+
+You don't need stalonetray and nm-applet to select a wifi network. You
+can list wifi networks on the command line using
+
+#+BEGIN_SRC 
+ nmcli dev wifi | sort -k6r
+#+END_SRC
+
+and connect to a network using
+#+BEGIN_SRC 
+nmcli dev wifi connect SSID password PASSWORD
+#+END_SRC
+
+** Fix no sound in the speaker problem:
+
+#+BEGIN_SRC 
+alsamixer
+#+END_SRC

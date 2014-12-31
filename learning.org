@@ -1,0 +1,445 @@
+#+TITLE: Learning
+#+SETUPFILE: org-html-themes/setup/bigblow-pirilampo.setup
+
+
+* Algorithms and Mathamatics
+** TODO MIT - 6.046J Introduction to Algorithms (SMA 5503), Fall 2005
+***  Course Information
+Instructor(s)
+Prof. Charles Leiserson
+
+Prof. Erik Demaine
+
+MIT Course Number
+6.046J / 18.410J
+
+As Taught In
+Fall 2005
+
+Level
+Undergraduate
+
+[[http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/][MIT Address]]
+
+*Start Date*: Dec 2014
+
+*Finish Date*:
+
+*** TODO Lectures [3/23]
+
+- [X] 	Lec 1  | 	1:20:36	|	11:18 26:42 43:56
+- [X] 	Lec 2  | 	1:10:32	|	16:58 40:14 48:26 
+- [X] 	Lec 3  | 	1:08:33	|	07:43 33:34 57:56
+- [ ] 	Lec 4  | 	1:20:33	|	35:06 01:09:50
+- [ ] 	Lec 5  | 	1:16:50	|
+- [ ] 	Lec 6  | 	1:08:49	|
+- [ ] 	Lec 7  | 	1:17:40	|
+- [ ] 	Lec 8  | 	1:19:47	|
+- [ ] 	Lec 9  | 	1:21:22	|
+- [ ] 	Lec 10 |	1:23:52	|
+- [ ] 	Lec 11 |	1:23:45	|
+- [ ] 	Lec 12 |	1:25:32	|
+- [ ] 	Lec 13 |	1:19:06	|
+- [ ] 	Lec 14 |	1:14:28	|
+- [ ] 	Lec 15 |	1:11:01	|
+- [ ] 	Lec 16 |	1:24:07	|
+- [ ] 	Lec 17 |	1:24:34	|
+- [ ] 	Lec 18 |	1:17:17	|
+- [ ] 	Lec 19 |	1:14:59	|
+- [ ] 	Lec 22 |	1:15:08	|
+- [ ] 	Lec 23 |	1:16:48	|
+- [ ] 	Lec 24 |	1:24:47	|
+- [ ]	Lec 25 | 	1:25:21	|
+** TODO Stanford - Programming Abstractions 
+*** Information
+Julie Zelenski, Stanford
+*** Video
+01 - 24:17
+** TODO MIT - Mathematics for Computer Science
+** TODO MIT - Highlights of Calculus
+
+*** Information
+
+http://ocw.mit.edu/resources/res-18-005-highlights-of-calculus-spring-2010/#
+
+*** Video[7/18]
+
+INTRODUCTION (1 VIDEO)
+- [X] Introduction
+HIGHLIGHTS OF CALCULUS (5 VIDEOS)
+- [X] Big Picture of Calculus
+- [X] Big Picture: Derivatives
+- [X] Max and Min and Second Derivative 
+- [X] The Exponential Function
+- [X] Big Picture: Integrals
+DERIVATIVES (12 VIDEOS)
+- [X] Derivative of sin x and cos x
+- [ ] Product Rule and Quotient Rule
+- [ ] Chains f(g(x)) and the Chain Rule
+- [ ] Limits and Continuous Functions
+- [ ] Inverse Functions f ^-1 (y) and the Logarithm x = ln y
+- [ ] Derivatives of ln y and sin ^-1 (y)
+- [ ] Growth Rate and Log Graphs
+- [ ] Linear Approximation/Newton's Method
+- [ ] Power Series/Euler's Great Formula
+- [ ] Differential Equations of Motion
+- [ ] Differential Equations of Growth
+- [ ] Six Functions, Six Rules, and Six Theorems
+** TODO Harvard - Introduction to Computer Science
+*** Information
+David J. Malan
+
+
+- [X]  1
+- [ ]  2
+- [ ]  3
+- [ ]  4
+- [ ]  5
+- [ ]  6
+- [ ]  7
+- [ ]  8
+- [ ]  9
+- [ ] 10
+- [ ] 11
+- [ ] 12
+- [ ] 13
+- [ ] 14
+- [ ] 15
+- [ ] 16
+- [ ] 17
+- [ ] 18
+- [ ] 19
+- [ ] 20
+* Programming Languages
+** Python
+*** TODO lynda-weinman-b-python-3-essential-training
+**** Information
+
+Bill Weinman
+
+**** TODO Video [36/87]
+
+21 directories, 88 files
+
+|-- 01 Introduction
+ - [X] 0101 Welcome.mov
+ - [X] 0102 Understanding prerequisites for Python.mov
+ - [X] 0103 Using the exercise files.mov
+|-- 02 Python Quick Start
+ - [X] 0201 Getting started with Hello World.mov
+ - [X] 0202 Selecting code with conditionals.mov
+ - [X] 0203 Repeating code with a loop.mov
+ - [X] 0204 Reusing code with a function.mov
+ - [X] 0205 Creating sequences with generator functions.mov
+ - [X] 0206 Reusing code and data with a class.mov
+ - [X] 0207 Greater reusability with inheritance and polymorphism.mov
+ - [X] 0208 Handling errors with exceptions.mov
+|-- 03 Setting Up Python
+ - [X] 0301 Installing Python 3 and Eclipse for Mac.mov
+ - [X] 0302 Installing Python 3 and Eclipse for Windows.mov
+|-- 04 General Syntax
+ - [X] 0401 Creating a main script.mov
+ - [X] 0402 Understanding whitespace in Python.mov
+ - [X] 0403 Commenting code.mov
+ - [X] 0404 Assigning values.mov
+ - [X] 0405 Selecting code and values with conditionals.mov
+ - [X] 0406 Creating and using functions.mov
+ - [X] 0407 Creating and using objects.mov
+|-- 05 Variables Objects and Values
+ - [X] 0501 Understanding variables and objects in Python.mov
+ - [X] 0502 Distinguishing mutable and immutable objects.mov
+ - [X] 0503 Using numbers.mov
+ - [X] 0504 Using strings.mov
+ - [X] 0505 Aggregating values with lists and tuples.mov
+ - [X] 0506 Creating associative lists with dictionaries.mov
+ - [X] 0507 Finding the type and identity of a variable.mov
+ - [X] 0508 Specifying logical values with True and False.mov
+|-- 06 Conditionals
+ - [X] 0601 Selecting code with if and else conditional statements.mov
+ - [X] 0602 Setting multiple choices with elif.mov
+ - [X] 0603 Understanding other strategies for multiple choices.mov
+ - [X] 0604 Using the conditional expression.mov
+|-- 07 Loops
+ - [X] 0701 Creating loops with while.mov
+ - [X] 0702 Iterating with for.mov
+ - [X] 0703 Enumerating iterators.mov
+ - [X] 0704 Controlling loop flow with break continue and else.mov
+|-- 08 Operators
+ - [ ] 0801 Performing simple arithmetic.mov
+ - [ ] 0802 Operating on bitwise values.mov
+ - [ ] 0803 Comparing values.mov
+ - [ ] 0804 Operating on Boolean values.mov
+ - [ ] 0805 Operating on parts of a container with the slice operator.mov
+ - [ ] 0806 Understanding operator precedence.mov
+|-- 09 Regular Expressions
+ - [ ] 0901 Using the re module.mov
+ - [ ] 0902 Searching with regular expressions.mov
+ - [ ] 0903 Replacing with regular expressions.mov
+ - [ ] 0904 Reusing regular expressions with re.compile.mov
+|-- 10 Exceptions
+ - [ ] 1001 Learning how exceptions work.mov
+ - [ ] 1002 Handling exceptions.mov
+ - [ ] 1003 Raising exceptions.mov
+|-- 11 Functions
+ - [ ] 1101 Defining functions.mov
+ - [ ] 1102 Using lists of arguments.mov
+ - [ ] 1103 Using named function arguments.mov
+ - [ ] 1104 Returning values from functions.mov
+ - [ ] 1105 Creating a sequence with a generator function.mov
+|-- 12 Classes
+ - [ ] 1201 Understanding classes and objects.mov
+ - [ ] 1202 Using methods.mov
+ - [ ] 1203 Using object data.mov
+ - [ ] 1204 Understanding inheritance.mov
+ - [ ] 1205 Applying polymorphism to classes.mov
+ - [ ] 1206 Using generators.mov
+ - [ ] 1207 Using decorators.mov
+|-- 13 String Methods
+ - [ ] 1301 Understanding strings as objects.mov
+ - [ ] 1302 Working with common string methods.mov
+ - [ ] 1303 Formatting strings with str.format.mov
+ - [ ] 1304 Splitting and joining strings.mov
+ - [ ] 1305 Finding and using standard string methods.mov
+|-- 14 Containers
+ - [ ] 1401 Creating sequences with tuples and lists.mov
+ - [ ] 1402 Operating on sequences with built-in methods.mov
+ - [ ] 1403 Organizing data with dictionaries.mov
+ - [ ] 1404 Operating on character data with bytes and byte arrays.mov
+|-- 15 File IO
+ - [ ] 1501 Opening files.mov
+ - [ ] 1502 Reading and writing text files.mov
+ - [ ] 1503 Reading and writing binary files.mov
+|-- 16 Databases
+ - [ ] 1601 Creating a database with SQLite 3.mov
+ - [ ] 1602 Creating retrieving updating and deleting records.mov
+ - [ ] 1603 Creating a database object.mov
+|-- 17 Modules
+ - [ ] 1701 Using standard library modules.mov
+ - [ ] 1702 Finding third-party modules.mov
+ - [ ] 1703 Creating a module.mov
+|-- 18 Debugging
+ - [ ] 1801 Dealing with syntax errors.mov
+ - [ ] 1802 Dealing with runtime errors.mov
+ - [ ] 1803 Dealing with logical errors.mov
+ - [ ] 1804 Using unit tests.mov
+|-- 19 Building a Database Application
+ - [ ] 1901 Normalizing a database interface.mov
+ - [ ] 1902 Deconstructing a database application.mov
+ - [ ] 1903 Displaying random entries from a database.mov
+|-- 20 Conclusion
+ - [ ] 2001 Goodbye.mov
+`-- Exercise Files
+    `-- Ex_Files_Python_3_EssT.zip
+
+** Clojure
+*** TODO Intro to Clojure, Brian Will
+**** Information
+https://www.youtube.com/playlist?list=PLAC43CFB134E85266
+
+*Start date*: Dec 2014
+
+*End date*:
+
+**** Videos [16/25]
+
+- [X] Clojure - intro		        		1:16 |  	
+- [X] Clojure - what's so great about it?		8:46 |
+- [X] Clojure - the Reader and Evaluator (1/4)		7:33 |
+- [X] Clojure - the Reader and Evaluator (2/4)		7:59 |
+- [X] Clojure - the Reader and Evaluator (3/4)		6:06 |
+- [X] Clojure - the Reader and Evaluator (4/4)		6:02 |
+- [X] Clojure - PRACTICAL: factorial function		4:56 |
+- [X] Clojure - PRACTICAL: FizzBuzz		        5:32 |
+- [X] Clojure - collections (1/6)		        3:40 |
+- [X] Clojure - collections (2/6)		        5:19 |
+- [X] Clojure - collections (3/6)		        4:30 |
+- [X] Clojure - collections (4/6)		        3:29 |
+- [X] Clojure - collections (5/6)		        2:50 |
+- [X] Clojure - collections (6/6)		        7:38 |
+- [X] Clojure - namespaces		        	7:01 |
+- [X] Clojure - miscellany		        	9:40 |
+- [ ] Clojure - PRACTICAL: rock, paper, scissors	6:12 |
+- [ ] Clojure - PRACTICAL: tic-tac-toe (1/3)		7:57 |
+- [ ] Clojure - PRACTICAL: tic-tac-toe (2/3)		10:38|
+- [ ] Clojure - PRACTICAL: tic-tac-toe (3/3)		8:03 |
+- [ ] Clojure - creating macros		        5:36 |	     |
+- [ ] Clojure - types		        		9:39 |
+- [ ] Clojure - references		        	7:27 |
+- [ ] Clojure - PRACTICAL: snake game (1/2)		17:22|
+- [ ] Clojure - PRACTICAL: snake game (2/2)		14:29|
+
+* Français
+** TODO Oh là là 法语特别节目
+
+*** Information
+
+*** Videos
+
+- [X]   1
+- [X]   2
+- [X]   3
+- [X]   4
+- [X]   5
+- [X]   6
+- [X]   7
+- [X]   8
+- [X]   9
+- [X]  10
+- [X]  11
+- [X]  12
+- [X]  13
+- [X]  14
+- [X]  15
+- [X]  16
+- [X]  17
+- [X]  18
+- [X]  19
+- [X]  20
+- [X]  21
+- [X]  22
+- [X]  23
+- [X]  24
+- [X]  25
+- [X]  26
+- [X]  27
+- [X]  28
+- [X]  29
+- [X]  30
+- [X]  31
+- [X]  32
+- [X]  33
+- [X]  34
+- [X]  35
+- [X]  36 
+- [X]  37
+- [X]  38
+- [X]  39
+- [X]  40
+- [X]  41
+- [X]  42
+- [X]  43
+- [X]  44
+- [X]  45
+- [X]  46
+- [X]  47
+- [X]  48
+- [X]  49
+- [X]  50
+- [X]  51
+- [X]  52
+- [X]  53
+- [X]  54
+- [X]  55
+- [X]  56
+- [X]  57
+- [X]  58
+- [X]  59
+- [X]  60
+- [X]  61
+- [X]  62
+- [X]  63
+- [X]  64
+- [X]  65
+- [X]  66
+- [X]  67
+- [X]  68
+- [X]  69
+- [X]  70
+- [X]  71
+- [X]  72
+- [X]  73
+- [X]  74
+- [X]  75
+- [X]  76
+- [X]  77
+- [X]  78
+- [X]  79
+- [X]  80
+- [X]  81 
+- [X]  82
+- [X]  83
+- [X]  84
+- [X]  85
+- [X]  86
+- [X]  87
+- [X]  88
+- [X]  89
+- [X]  90
+- [ ]  91
+- [ ]  92
+- [ ]  93
+- [ ]  94
+- [ ]  95
+- [ ]  96
+- [ ]  97
+- [ ]  98
+- [ ]  99
+- [ ] 100
+- [ ] 101
+- [ ] 102
+- [ ] 103
+- [ ] 104
+- [ ] 105
+- [ ] 106
+- [ ] 107
+- [ ] 108
+- [ ] 109
+- [ ] 110
+
+** TODO Linguaphone Français
+
+*** Information
+
+*** Video
+   - [X]  1
+   - [X]  2
+   - [X]  3
+   - [X]  4
+   - [X]  5
+   - [X]  6
+   - [X]  7
+   - [X]  8
+   - [X]  9
+   - [X] 10
+   - [X] 11
+   - [X] 12
+   - [X] 13
+   - [X] 14
+   - [X] 15
+   - [X] 16
+   - [X] 17
+   - [X] 18
+   - [X] 19
+   - [X] 20
+   - [X] 21
+   - [X] 22
+   - [X] 23
+   - [X] 24
+   - [X] 25
+   - [X] 26
+   - [X] 27
+   - [X] 28
+   - [X] 29
+   - [X] 30
+   - [X] 31
+   - [X] 32
+   - [X] 33
+   - [X] 34
+   - [X] 35
+   - [X] 36
+   - [X] 37
+   - [X] 38
+   - [X] 39
+   - [X] 40
+   - [X] 41
+
+
+** Reflet 走遍法国
+- [X] 走遍法国 1
+- [ ] 走遍法国 2	53:18
+
+
+
+
+
+* TODO Update phone apps from GooglePlay.

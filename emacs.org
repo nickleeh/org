@@ -1,0 +1,304 @@
+# Emacs -*- mode: org -*-
+#+SETUPFILE: org-html-themes/setup/bigblow-pirilampo.setup
+
+* Settings
+** Init file
+*** Keep everything in ~/.emacs.d/
+
+Using ~/.emacs.d/init.el instead of ~/.emacs has some advantages: 
+
+ - It keeps the $HOME directory uncluttered, because all of Emacs' files
+are neatly contained in a single directory. For the same reason, all
+modern Emacs packages write their caches, histories, etc. into
+~/.emacs.d/.
+
+ - It makes version control easier, especially if you split your init.el
+into different files in ~/.emacs.d. You can just commit init.el like
+every other file, and git clone /my/emacs/config.git ~/.emacs.d on a
+new system gives you all of your Emacs configuration, without having
+to link a file into $HOME.
+
+**** Section Method
+
+People using lesser editors like to split their code into multiple
+files. If you're using Emacs, there's no reason to do that: just use a
+single large file, which you split into sections.
+
+Each section should start with
+
+#+BEGIN_SRC 
+^L
+;;; title of the section
+#+END_SRC
+where you insert the ~^L~ character by typing ~C-q C-l~. 
+
+You can then use commands such as ~C-x ]~ (forward-page) or ~C-x n p~
+(narrow-to-page) to navigate through the file. See Section 25.4 of the
+Emacs manual for more.
+
+**** Split Method
+
+A classic way of doing this is splitting your ~.emacs~ into separate
+files. For example, you could move all your web stuff into
+~~/.emacs.d/web-config.el~ and then load it inside ~init.el~:
+
+#+BEGIN_SRC 
+(load "~/.emacs.d/web-config.el")
+#+END_SRC
+
+
+If you want to keep your ~/.emacs.d a bit more organized, you could
+also shift these config files into their own directory:
+
+#+BEGIN_SRC 
+(load "~/.emacs.d/config/web.el") 
+#+END_SRC
+
+Now you can just jump to the appropriate file when making changes to
+your config.
+*** Color
+**** List all the color available in Emacs:
+
+#+BEGIN_SRC elisp
+M-x list-color-display
+#+END_SRC
+** Elisp
+
+It's easy to evaluate Lisp expressions in Inferior Emacs-Lisp Mode:
+
+#+BEGIN_SRC 
+M-x ielm
+#+END_SRC
+
+
+#+BEGIN_SRC 
+C-M-x ;Eval a function
+#+END_SRC
+** Open with
+
+#+BEGIN_SRC elisp
+(add-to-list 'load-path "/path/to/downloaded/openwith.el")
+(require 'openwith)
+(setq openwith-associations '(("\\.pdf\\'" "evince" (file))))
+(openwith-mode t)
+#+END_SRC
+** PDF
+*** pdf-tools
+
+    https://github.com/politza/pdf-tools
+** ispell
+;; use apsell as ispell backend  
+;;(setq-default ispell-program-name "aspell")  
+;; use American English as ispell default dictionary  
+(ispell-change-dictionary "american" t) 
+
+* Eshell and Term
+** Term
+
+toggle term-line-mode / term-raw-mode
+
+#+begin_src elisp -n
+C-c C-j / C-c C-k
+#+end_src
+
+
+Display battery status:
+
+#+BEGIN_SRC 
+M-x display-battery-mode    ; Display-Battery mode enabled
+#+END_SRC
+
+
+Display time in status bar:
+
+#+BEGIN_SRC 
+
+M-x display-time-mode    ; Display-Time mode enable
+
+#+END_SRC
+
+
+switch window with ace-window:
+
+https://github.com/abo-abo/ace-window
+
+#+BEGIN_SRC elisp
+(global-set-key (kbd "M-p") 'ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+#+END_SRC
+
+
+** Eshell
+
+*** Aliases
+
+Aliases are commands that expand to a longer input line.  For example,
+`ll' is a common alias for `ls -l', and would be defined with the
+command invocation ~alias ll ls -l~; with this defined, running `ll
+foo' in Eshell will actually run `ls -l foo'.  Aliases defined (or
+deleted) by the `alias' command are automatically written to the file
+named by `eshell-aliases-file', which you can also edit directly
+(although you will have to manually reload it).
+
+#+BEGIN_SRC 
+Saving file /home/nick/.emacs.d/eshell/alias
+#+END_SRC
+
+
+In short: use alias 
+
+#+BEGIN_SRC 
+aps 'aptitude search $*' 
+#+END_SRC
+
+(quotes seem to be
+important).
+
+The comment at the top of em-alias.el says the following.
+
+Creating aliases The user interface is simple: type alias followed by
+the command name followed by the definition. Argument references are
+made using $1, $2, etc., or $*. For example:
+
+alias ll 'ls -l $*' This will cause the command ll NEWS to be replaced
+by ls -l NEWS. This is then passed back to the command parser for
+reparsing.{Only the command text specified in the alias definition
+will be reparsed. Argument references (such as $*) are handled using
+variable values, which means that the expansion will not be reparsed,
+but used directly.}
+
+To delete an alias, specify its name without a definition:
+
+alias ll Aliases are written to disk immediately after being defined
+or deleted. The filename in which they are kept is defined by the
+variable eshell-aliases-file.
+
+*** Kill some process:
+
+#+BEGIN_SRC 
+for pid in { pgrep "chrome" } {/bin/kill $pid}
+#+END_SRC
+* Dired
+
+***  Easy copy/move file between dired buffers
+#+BEGIN_SRC 
+(setq dired-dwim-target t)    ; if there is a Dired buffer displayed in the next window, use its current directory, instead of this Dired buffer's current directory.
+#+END_SRC
+
+
+*** Human readable file size listing
+
+#+BEGIN_SRC 
+C-u s switches <RET>     ; lets you specify a new value for dired-listing-switches.
+#+END_SRC
+
+For example: 
+#+BEGIN_SRC 
+C-u s -lah <enter>
+#+END_SRC
+
+*** Switch dir sort order
+#+BEGIN_SRC 
+s    ; Toggle between alphabetical order and date/time order (dired-sort-toggle-or-edit). 
+#+END_SRC
+
+Setting display options:
+
+C-u s
+
+or set in .emacs
+
+(setq dired-listing-switches "-laGh1v --group-directories-first")
+* org-mode
+
+** Convert lines to list with checkboxes
+Original question and answers are on:
+
+http://emacs.stackexchange.com/questions/5613/how-to-convert-lines-to-an-org-mode-checklist?noredirect=1#comment8411_5613
+
+*** Function
+Here's a very simple function that will convert all lines in the
+selected region to an unordered list with checkboxes:
+
+#+BEGIN_SRC elisp
+(defun org-convert-lines-to-checklist (beg end)
+  "Convert all plain lines in region to a plain list with
+checkboxes."
+  (interactive "r")
+  (save-excursion
+    (goto-char beg)
+    (dotimes (_ (- (line-number-at-pos end) (line-number-at-pos beg)))
+      (insert "- [ ] ")
+      (indent-according-to-mode)
+      (forward-line 1))))
+#+END_SRC
+
+*** Rectangle editing:
+Select the list.
+Move the point to the first column.
+
+#+BEGIN_SRC 
+C-x r t- [ ]RET
+#+END_SRC
+
+
+*** Using search and replace:
+(If each line starts with the same WORD:
+#+BEGIN_SRC 
+M-%WORD Enter  - [ ] WORD Enter
+#+END_SRC
+* Package Management
+** ELPA
+
+http://www.emacswiki.org/emacs/ELPA
+
+*** melpa-stable
+
+
+#+BEGIN_SRC elisp
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(package-initialize)
+#+END_SRC
+
+** el-get
+
+https://github.com/dimitri/el-get
+
+#+BEGIN_SRC elisp
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)
+#+END_SRC
+
+
+Replicating a package set on another Emacs installation
+
+In the Emacs whose setup you wish to replicate, type M-x ielm for an Emacs Lisp prompt, and enter:
+
+#+BEGIN_SRC elisp
+`(setq my-packages
+              ',(mapcar #'el-get-as-symbol
+                        (el-get-list-package-names-with-status "installed")))
+#+END_SRC
+
+Copy the result into the new Emacs, in which you should already have
+installed El-Get, and evaluate it, followed by 
+
+#+BEGIN_SRC elisp
+(el-get 'sync my-packages)
+#+END_SRC
+* Magit
+
+[[http://daemianmack.com/magit-cheatsheet.html][Magit Cheatsheet]]
+
+[[http://vimeo.com/2871241][Meet Magit,from Alex Vollmer, 5 years ago]]

@@ -1,0 +1,26 @@
+#+TITLE: Selected Books
+#+SETUPFILE: org-html-themes/setup/bigblow-pirilampo.setup
+
+* Selected books:
+
+** Mathematics
+
+Disconcrete Mathematics and Its Applications
+** Algorithms
+
+ - Data Structure in C and C++
+ - Head First: Design Patterns
+
+** Version Control
+
+*** Git
+
+** Programming Languages
+*** Clojure
+
+*** C
+The C Programming Language
+
+** Francais
+
+
