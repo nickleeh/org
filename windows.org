@@ -13,3 +13,33 @@ Start button (typically at the lower left corner of the screen) and
 choose "Explore All Users". Navigate to the Startup folder inside the
 Programs folder. From the menu bar, choose Edit -> Paste Shortcut. The
 shortcut to the script should now be in the Startup folder.
+** SSH
+
+Fix "Could not open a connection to your authentication agent." when using ssh-add
+
+ 44201 views
+
+identity 
+ssh-add 
+ssh-agent 
+ssh 
+shell 
+ on May 6, 2013
+If you're trying to add identities to the authentication agent using ssh-add you might get the following error:
+
+Could not open a connection to your authentication agent.
+The reason as the error message suggests is, ssh-add doesn't know how to talk with the authentication agent.
+
+The problem can be solved by setting SSH_AUTH_SOCK environment variable.
+
+If you run ssh-agent you should get some output like this:
+
+SSH_AUTH_SOCK=/tmp/ssh-agVZL13989/agent.13989; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=13990; export SSH_AGENT_PID;
+echo Agent pid 13990;
+now if you evaluate the command output in your shell, the variable will be set:
+
+eval $(ssh-agent)
+Hope it helps.
+
+https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add
