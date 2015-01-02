@@ -1,5 +1,5 @@
 *.html
-*.~
+*~
 *.log
 *.tex
 /windows.org~

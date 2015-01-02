@@ -3,7 +3,9 @@
 * PowerShell
 ** Allow run script
 set-executionpolicy remotesigned
-** Add application to autostart:
+** Get command
+get-command git | select definintion
+* Add application to autostart:
 
 How do I put my hotkeys and hotstrings into effect automatically every time I start my PC?
 There is a folder in the Start Menu called Startup.  If you put a shortcut to your script in that folder, the script will launch automatically every time you start your PC. To create a shortcut:
