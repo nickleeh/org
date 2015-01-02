@@ -43,3 +43,5 @@ eval $(ssh-agent)
 Hope it helps.
 
 https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add
+* Remap key
+KeyTweak
