@@ -1,8 +1,18 @@
-
+#+SETUPFILE: org-html-themes/setup/bigblow-pirilampo.setup
 
 * PowerShell
 ** Allow run script
 set-executionpolicy remotesigned
+** Change font
+ÐÞ¸ÄcmdÄ¬ÈÏµÄ±àÂë
+         ÔÚcmdÀïÃæÔËÐÐ
+[html] view plaincopy
+#+BEGIN_SRC 
+chcp 850  
+#+END_SRC
+
+(defaut 936 for chinese)
+
 ** Get command
 get-command git | select definintion
 * Add application to autostart:
@@ -47,3 +57,25 @@ Hope it helps.
 https://coderwall.com/p/rdi_wq/fix-could-not-open-a-connection-to-your-authentication-agent-when-using-ssh-add
 * Remap key
 KeyTweak
+* The Best Windows Software
+ - 7-zip :: Kurt Schwehr has an excellent set of videos up on YouTube
+            that describe the use of Python as a research tool. These
+            were made as part of a course at the University of New
+            Hampshire. The topics covered go beyond IPython, and it’s
+            a very cohesive set of lectures around the kinds of
+            workflows that IPython was built for.
+ - top100files
+ - TreeSizeFree
+ - dupeGuru
+* Top useful site
+ - lifehacker
+ - howtogeek
+ - makeuseof
+
+
+* VLC
+Start VLC with proxy:
+
+#+BEGIN_SRC 
+VLC.exe --http-proxy=myusername:mypassword@SERVERNAME:8080
+#+END_SRC

@@ -231,6 +231,42 @@ Bill Weinman
 `-- Exercise Files
     `-- Ex_Files_Python_3_EssT.zip
 
+** Rust
+*** The Rust Guide
+**** Information
+http://doc.rust-lang.org/guide.html
+**** Progress [70%]
+ - [X] 1 Installing Rust
+ - [X] 2 Hello, world!
+ - [X] 3 Hello, Cargo!
+ - [X] 4 Variable bindings
+ - [X] 5 if
+ - [X] 6 Functions
+ - [X] 7 Comments
+ - [X] 8 Compound Data Types
+ - [X] 9 Match
+ - [X] 10 Looping
+ - [X] 11 Strings
+ - [X] 12 Arrays, Vectors, and Slices
+ - [X] 13 Standard Input
+ - [X] 14 Guessing Game
+ - [X] 15 Crates and Modules
+ - [X] 16 Testing
+ - [X] 17 Pointers
+ - [X] 18 Patterns
+ - [X] 19 Method Syntax
+ - [ ] 20 Closures
+ - [ ] 21 Iterators
+ - [ ] 22 Generics
+ - [ ] 23 Traits
+ - [ ] 24 Threads
+ - [ ] 25 Macros
+ - [ ] 26 Unsafe
+ - [ ] 27 Conclusion
+*** Rust by Example
+http://rustbyexample.com/
+*** Rust for Rubyists
+http://www.rustforrubyists.com/book/book.html
 ** Clojure
 *** TODO Intro to Clojure, Brian Will
 **** Information
@@ -268,11 +304,20 @@ https://www.youtube.com/playlist?list=PLAC43CFB134E85266
 - [ ] Clojure - PRACTICAL: snake game (1/2)		17:22|
 - [ ] Clojure - PRACTICAL: snake game (2/2)		14:29|
 
+* Database
+** Access
+*** Microsoft Access 2013 Essential Training
+**** Information
+[[https://www.youtube.com/watch?v=rbpAeAGsm7U][YouTube]]
+
+**Total time**: 5:05:15
+
+**** Video
+34:19 49:35 54:37 59:07
+
 * Français
-** TODO Oh là là 法语特别节目
-
+** TODO Oh Là Là 法语特别节目
 *** Information
-
 *** Videos
 
 - [X]   1
@@ -385,9 +430,8 @@ https://www.youtube.com/playlist?list=PLAC43CFB134E85266
 - [ ] 108
 - [ ] 109
 - [ ] 110
-
+  
 ** TODO Linguaphone Français
-
 *** Information
 
 *** Video
@@ -433,13 +477,11 @@ https://www.youtube.com/playlist?list=PLAC43CFB134E85266
    - [X] 40
    - [X] 41
 
-
 ** Reflet 走遍法国
-- [X] 走遍法国 1
-- [ ] 走遍法国 2	53:18
+- [X] 璧伴亶娉曞浗 1
+- [ ] 璧伴亶娉曞浗 2	53:18
 
 
 
 
 
-* TODO Update phone apps from GooglePlay.

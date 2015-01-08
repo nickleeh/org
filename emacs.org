@@ -179,12 +179,10 @@ variable eshell-aliases-file.
 for pid in { pgrep "chrome" } {/bin/kill $pid}
 #+END_SRC
 * Dired
-
 ***  Easy copy/move file between dired buffers
 #+BEGIN_SRC 
 (setq dired-dwim-target t)    ; if there is a Dired buffer displayed in the next window, use its current directory, instead of this Dired buffer's current directory.
 #+END_SRC
-
 
 *** Human readable file size listing
 
@@ -210,7 +208,8 @@ or set in .emacs
 
 (setq dired-listing-switches "-laGh1v --group-directories-first")
 * org-mode
-
+** org-html-theme
+https://github.com/fniessen/org-html-themes
 ** Convert lines to list with checkboxes
 Original question and answers are on:
 
